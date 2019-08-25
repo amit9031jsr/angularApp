@@ -1,25 +1,41 @@
+import { Customer } from './Customer';
 import { Component } from '@angular/core';
 
 @Component({ //component decorator
     selector:'sandbox',
-    template:`<h1>Hello {{ name }}</h1>`
+    template:`<h1>Hello World</h1>`
 })
 
 export class SandboxComponent{
 // property
-   name:string = 'Amit Mandal';
-   age:number = 25;
-   hasChildren:boolean = true;
-   city:any = 'Stanford';
-   myNumbersArray:number[] = [1,2,3];
-   myStringsArray:string[] = ['hello', 'world'];
-   myAnyArray:any[] = [1,2,'hello'];
-   myTuple:[string, number] = ['hello', 3];
-   unusable:void = undefined;
-   u:undefined = undefined;
-   n:null = null;
+    customer:Customer;
+    customers:Customer[];
 
-   constructor(){
-       
-   }
+    constructor(){
+        this.customer = {
+            id:1,
+            name:'Amit Mandal',
+            email:'amit@gmail.com'
+        }
+
+        this.customers = [
+            {
+                id:1,
+                name:'Amit Mandal',
+                email:'amit@gmail.com'
+            },
+            {
+                id:2,
+                name:'Priyank Verma',
+                email:'priyank@gmail.com'
+            },
+            {
+                id:3,
+                name:'Ravi Seth',
+                email:'ravi@gmail.com'
+            }
+        ]
+    }
+   
 }
+
