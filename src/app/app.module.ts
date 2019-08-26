@@ -1,4 +1,4 @@
-import { SandboxComponent } from './components/sandbox.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 import { BrowserModule } from '@angular/platform-browser'; //displaying our app in the browser
 import { NgModule } from '@angular/core';
 
